@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil Price Calculator</title>
+    <script src="./scripts/calculator.js" defer></script>
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+<body>
+    <div id="bg">
+        <main class="content">
+            <header class="name-logo">
+                <img src="https://www.rochaautopecas.com.br/wp-content/uploads/2016/08/logo-branco-1.png" alt="rocha-auto-pecas-logo">
+                <h1>Calculador de caixa de óleo</h1>
+            </header>
+            <div id="container">
+                <div class="value-sec">
+                    <h3>Digite o valor do litro:</h3>
+                    <div class="input-style">
+                        <p>R$</p>
+                        <input type="number" name="oilValue" id="price_of_oil" required placeholder="19,90" min="0" max="10">
+                    </div>
+                </div>
+                <div class="total-of-calculated">
+                    <div class="total-div">
+                        <h3>Valor total(24un.):</h3>
+                        <p id="showValue">R$0</p>
+                    </div>
+                    <span>Desconto de 15%: <p id="showFifteenPercent">R$0</p></span>
+                    <span>Desconto de 18%: <p id="showEighteenPercent">R$0</p></span>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="btnCalculator">
+                        Calcular
+                    </button>
+                    <button type="button" id="btnReset">
+                        Resetar
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
