@@ -25,7 +25,7 @@ input::-webkit-inner-spin-button {
 
 .content {
     width: 90%;
-    height: 60%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,10 +66,16 @@ input::-webkit-inner-spin-button {
 }
 
 #container .value-sec {
-    display: flex;
-    flex-direction: column;
+    width: 90%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: 1fr 1fr;
 }
 #container .value-sec h3 {
+    grid-row: 1;
+    grid-column: 1 / 4;
     color: #e2e2e2;
     display: block;
     margin-bottom: 8px;
@@ -79,6 +85,7 @@ input::-webkit-inner-spin-button {
     letter-spacing: 0.05em
 }
 #container .value-sec .input-style {
+    grid-column: 1 / 3;
     display: flex;
     justify-content: flex-start;
 }
@@ -104,6 +111,20 @@ input::-webkit-inner-spin-button {
     border-radius: 0 8px 8px 0;
     font-weight: bold;
 }
+#container .value-sec .selected-area {
+    padding: 0.2rem;
+    height: 80%;
+    width: 100%;
+}
+#container .value-sec .selected-area select {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    font-size: 16px;
+    color: #666;
+    border-radius: 8px 0px 8px 0;
+    font-weight: bold;
+}
 #container .value-sec .input-style input:focus {
     outline: 0;
 }
@@ -114,14 +135,12 @@ input::-webkit-inner-spin-button {
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     gap: 0.4rem;
-    padding-bottom: 1.6rem;
 }
 .content .total-of-calculated .total-div {
     grid-row: 1;
     grid-column: 1 / 3;
     display: flex;
     align-items: center;
-    padding: 0.4rem;
     gap: 8px;
     color: #fff;
 }
@@ -142,12 +161,16 @@ input::-webkit-inner-spin-button {
     font-size: large;
     font-weight: bold;
 }
+.content .total-of-calculated span div {
+    color: #ffffffda;
+}
 
 .content .buttons {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 1.4rem;
 }
 .content .buttons button {
     background-color: #f3f7fe;

@@ -12,7 +12,7 @@
         <main class="content">
             <header class="name-logo">
                 <img src="https://www.rochaautopecas.com.br/wp-content/uploads/2016/08/logo-branco-1.png" alt="rocha-auto-pecas-logo">
-                <h1>Calculador de caixa de óleo</h1>
+                <h1>Calculador Promocional</h1>
             </header>
             <div id="container">
                 <div class="value-sec">
@@ -21,14 +21,26 @@
                         <p>R$</p>
                         <input type="number" name="oilValue" id="price_of_oil" required placeholder="19,90" min="0" max="10">
                     </div>
+                    <form class="selected-area">
+                        <select name="box_quantity" id="box_quantity" >
+                            <option value="24">24 un.</option>
+                            <option value="12">12 un.</option>
+                        </select>
+                    </form>
                 </div>
                 <div class="total-of-calculated">
                     <div class="total-div">
-                        <h3>Valor total(24un.):</h3>
+                        <h3>Valor total da caixa:</h3>
                         <p id="showValue">R$0</p>
                     </div>
-                    <span>Desconto de 15%: <p id="showFifteenPercent">R$0</p></span>
-                    <span>Desconto de 18%: <p id="showEighteenPercent">R$0</p></span>
+                    <span>
+                        Desconto de 15%: <p id="showFifteenPercent">R$0</p>
+                        <div id="literPromo15"></div>
+                    </span>
+                    <span>
+                        Desconto de 18%: <p id="showEighteenPercent">R$0</p>
+                        <div id="literPromo18"></div>
+                    </span>
                 </div>
                 <div class="buttons">
                     <button type="button" id="btnCalculator">
