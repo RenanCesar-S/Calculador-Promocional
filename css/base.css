@@ -130,6 +130,7 @@ input::-webkit-inner-spin-button {
 }
 
 .content .total-of-calculated {
+    width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -196,4 +197,16 @@ input::-webkit-inner-spin-button {
     background-color: #f63b3b;
     box-shadow: 0 0 0 5px #f63b3b5f;
     color: #fff;
+}
+
+@media only screen and (min-height: 768px) {
+    .content {
+        height: 65%;
+    }
+}
+
+@media only screen and (min-height: 900px) {
+    .content {
+        height: 60%;
+    }
 }

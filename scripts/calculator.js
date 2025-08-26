@@ -50,4 +50,6 @@ btnReset.addEventListener("click", () => {
     showValue.innerHTML = `R$0`;
     showFifteenPercent.innerHTML = `R$0`;
     showEighteenPercent.innerHTML = `R$0`;
+    literPromo15.innerHTML = ``;
+    literPromo18.innerHTML = ``;
 })
