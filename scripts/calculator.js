@@ -7,6 +7,8 @@ const btnReset = document.querySelector("#btnReset");
 const literPromo15 = document.querySelector("#literPromo15");
 const literPromo18 = document.querySelector("#literPromo18");
 const boxQuantity = document.querySelector("#box_quantity");
+const modalAlert = document.querySelector("#modal-alert");
+const closeModal = document.querySelector("#close_modal");
 
 let boxTotal;
 let firstDiscount;
@@ -31,18 +33,25 @@ boxQuantity.addEventListener("change", (e) => {
 })
 
 btnCalculate.addEventListener("click", () => {
-    if (selectValue == 24) {
+    if (handleInputPrice.value == '') {
+        modalAlert.style.display = 'flex';
+    } else if (selectValue == 24) {
         calculate(handleInputPrice.value, selectValue);
         calculatePromo(selectValue);
-    } else {
+        showValue.innerHTML = `R$${boxTotal.toFixed(2)}`;
+        showFifteenPercent.innerHTML = `R$${firstDiscount.toFixed(2)}`;
+        literPromo15.innerHTML = `Litro à R$${firstDiscountPromo.toFixed(2)}`;
+        showEighteenPercent.innerHTML = `R$${secondDiscount.toFixed(2)}`;
+        literPromo18.innerHTML = `Litro à R$${secondDiscountPromo.toFixed(2)}`;
+    } else if (selectValue == 12) {
         calculate(handleInputPrice.value, selectValue);
         calculatePromo(selectValue);
+        showValue.innerHTML = `R$${boxTotal.toFixed(2)}`;
+        showFifteenPercent.innerHTML = `R$${firstDiscount.toFixed(2)}`;
+        literPromo15.innerHTML = `Litro à R$${firstDiscountPromo.toFixed(2)}`;
+        showEighteenPercent.innerHTML = `R$${secondDiscount.toFixed(2)}`;
+        literPromo18.innerHTML = `Litro à R$${secondDiscountPromo.toFixed(2)}`;
     }
-    showValue.innerHTML = `R$${boxTotal.toFixed(2)}`;
-    showFifteenPercent.innerHTML = `R$${firstDiscount.toFixed(2)}`;
-    literPromo15.innerHTML = `Litro à R$${firstDiscountPromo.toFixed(2)}`;
-    showEighteenPercent.innerHTML = `R$${secondDiscount.toFixed(2)}`;
-    literPromo18.innerHTML = `Litro à R$${secondDiscountPromo.toFixed(2)}`;
 });
 
 btnReset.addEventListener("click", () => {
@@ -52,4 +61,8 @@ btnReset.addEventListener("click", () => {
     showEighteenPercent.innerHTML = `R$0`;
     literPromo15.innerHTML = ``;
     literPromo18.innerHTML = ``;
+})
+
+closeModal.addEventListener("click", () => {
+    modalAlert.style.display = 'none';
 })
